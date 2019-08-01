@@ -47,7 +47,7 @@ public class AlumnoController {
 	@Qualifier("converter")
 	private Convertidor convertidor;
 	
-	
+	//crear alumno
 	@PostMapping("/alumno")
 	public MAlumno crearAlumno(@RequestBody @Valid Alumno alumno) {
 		MAlumno malumno = new MAlumno(this.alumnos.save(alumno));
@@ -60,13 +60,13 @@ public class AlumnoController {
 	  return convertidor.convertirListaA(this.alumnos.findAll());
     }
 	
-	
+	//buscar alumno por el id
 	@GetMapping("/alumno{id}") 
     public MAlumno getAlumno(@RequestParam (value = "id") long id){
 		return new MAlumno(this.alumnos.findById(id).orElseThrow(
                 () -> new ResourceNotFoundException("Alumno", id)));
 		}
-	
+	//modificar alumno
 	@PutMapping("/alumno")
     public MAlumno actualizarAlumno(@RequestBody @Valid Alumno alumno){
 		MAlumno malumno = new MAlumno(
@@ -84,6 +84,7 @@ public class AlumnoController {
 		return malumno;
     }
 	
+	//borrar un alumno por el id
 	@DeleteMapping("/alumno{id}")
     public ResponseEntity borrarAlumnos(@RequestParam long id){
          return this.alumnos.findById(id).map((toDelete) -> {
@@ -92,7 +93,7 @@ public class AlumnoController {
         }).orElseThrow(() -> new ResourceNotFoundException("Alumno", id));
     }
 	
-	//listar los todos los cursos de un alumno
+	//listar todos los cursos de un alumno
 	@GetMapping("/alumno/{id}/cursos")
     public List<MCurso> getCursos(@PathVariable long id){
         List<Curso> alumnoCursos= new ArrayList<>();
@@ -108,7 +109,7 @@ public class AlumnoController {
     }
 	
 	
-	//listar cursos aprobados
+	//listar cursos aprobados de un alumno
 	@GetMapping("alumno/{id}/cursos/aprobados")
     public List<MCurso> getCursosAprobados(@PathVariable long id){
 		return convertidor.convertirListaC(cursos.cursosAProbados(id));

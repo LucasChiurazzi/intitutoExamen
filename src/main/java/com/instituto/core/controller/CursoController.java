@@ -48,7 +48,7 @@ public class CursoController {
 	@Qualifier("converter")
 	private Convertidor convertidor;
 	
-	//Crud Curso
+	//crear curso y agrega un profesor
 	@PostMapping("/curso/profesor{id_profesor}")
 	public MCurso crearCurso(@RequestParam (value = "id_profesor") long idprofesor,
 			@RequestBody @Valid Curso curso) {
@@ -64,13 +64,14 @@ public class CursoController {
 	  return convertidor.convertirListaC(this.cursos.findAll());
     }
 	
-	
+	//obtener un curso por el id
 	@GetMapping("/curso/{id}") 
     public MCurso getCurso(@PathVariable long id){
 		return new MCurso(cursos.findById(id).orElseThrow(
                 () -> new ResourceNotFoundException("Curso", id)));
 		}
 	
+	//actualizar curso
 	@PutMapping("/curso{id_profesor}")
     public MCurso actualizarCurso(@RequestParam (value = "id_profesor") long idprofesor,
     		@RequestBody @Valid Curso curso){
@@ -88,6 +89,7 @@ public class CursoController {
 		
     }
 	
+	//Borrar curso
 	@DeleteMapping("/curso{id}")
     public ResponseEntity deleteStudent(@PathVariable long id){
          return cursos.findById(id).map((toDelete) -> {

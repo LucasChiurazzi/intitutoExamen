@@ -36,7 +36,7 @@ public class ProfesorController {
 	@Qualifier("converter")
 	private Convertidor convertidor;
 	
-	//Crud Profesor
+	//Crear Profesor
 	@PostMapping("/profesor")
 	public MProfesor crearProfesor(@RequestBody @Valid Profesor profesor) {
 		MProfesor mprofesor = new MProfesor(this.profesores.save(profesor));
@@ -49,13 +49,14 @@ public class ProfesorController {
 	  return convertidor.convertirListaP(this.profesores.findAll());
     }
 	
-	
+	//borrar el id
 	@GetMapping("/profesor/{id}") 
     public MProfesor getProfesor(@PathVariable long id){
 		return new MProfesor(this.profesores.findById(id).orElseThrow(
                 () -> new ResourceNotFoundException("Profesor", id)));
 		}
 	
+	//modificar profesor
 	@PutMapping("/profesor")
     public MProfesor actualizarProfesor(@RequestBody @Valid Profesor profesor){
 		MProfesor mprofesor = new MProfesor(
@@ -73,6 +74,7 @@ public class ProfesorController {
 		return mprofesor;
     }
 	
+	//borrar profesor por id
 	@DeleteMapping("/profesor/{id}")
     public ResponseEntity deleteStudent(@PathVariable long id){
          return this.profesores.findById(id).map((toDelete) -> {
@@ -82,6 +84,7 @@ public class ProfesorController {
     }
 	
 	
+	//obtener los cursos de un profesor
 	@GetMapping("profesor/{id}/cursos")
 	public List<MCurso> getCursosDados(@PathVariable long id){
 		return convertidor.convertirListaC(profesores.cursoDados(id));
