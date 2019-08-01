@@ -1,0 +1,849 @@
+{
+  "front-version": "2.20.0",
+  "version": 3,
+  "nodes": [
+    {
+      "uriEditor": true,
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.4",
+        "name": "PUT"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  \"id\": 2,\n  \"fechaCursada\":\"2015-03-02\",\n  \"nota\": 101,\n  \"alumno\":{\n\"id\": 4,\n\"tipodni\": \"DNI\",\n\"dni\": 32173506,\n\"nombre\": \"Juan\",\n\"apellido\": \"Perez\",\n\"fechanac\": \"1986-06-03\",\n\"sexo\": \"masculino\",\n\"telefono\": \"1234567\",\n\"domicilio\": \"Maestro Gonzalez 820\"\n},\n  \"curso\":{\n\"id\": 4,\n\"nombreCurso\": \"Matematica\",\n\"descripcion\": \"Numeros\",\n\"notaXAprobar\": 6,\n\"profesor\":{\n\"id\": 5,\n\"tipodni\": \"DNI\",\n\"dni\": 1111111,\n\"nombre\": \"Andres\",\n\"apellido\": \"Chiurazzi2\",\n\"fechanac\": \"2018-06-02\",\n\"sexo\": \"masculino\",\n\"telefono\": \"1234567\",\n\"domicilio\": \"Maestro Gonzalez 820\"\n}\n}\n  }"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": [
+            {
+              "enabled": true,
+              "name": "curso_id",
+              "value": "4"
+            }
+          ]
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8090",
+        "path": "/instituto/cursada/alumno/4/curso"
+      },
+      "id": "ade9822e-0157-411d-8dda-e69fbd17ca6a",
+      "lastModified": "2019-07-31T03:06:38.322-03:00",
+      "name": "actualizar cursada",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {}
+    },
+    {
+      "uriEditor": true,
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.4",
+        "name": "PUT"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n\"id\": 2,\n\"nombreCurso\": \"Programacion\",\n\"descripcion\": \"Introduccion\",\n\"notaXAprobar\": 7\n}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": [
+            {
+              "enabled": true,
+              "name": "id_profesor",
+              "value": "2"
+            }
+          ]
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8090",
+        "path": "/instituto/curso"
+      },
+      "id": "7de672c7-0d04-4c8d-a813-afa6caae719a",
+      "lastModified": "2019-07-30T15:11:53.551-03:00",
+      "name": "actualizar curso",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {}
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.4",
+        "name": "PUT"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n\"id\": 4,\n\"tipodni\": \"DNI\",\n\"dni\": 5555555,\n\"nombre\": \"Pepe Profesor\",\n\"apellido\": \"Chiurazzi2\",\n\"fechanac\": \"2018-06-02\",\n\"sexo\": \"masculino\",\n\"telefono\": \"1234567\",\n\"domicilio\": \"Maestro Gonzalez 820\"\n},"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8090",
+        "path": "/instituto/profesor"
+      },
+      "id": "1e23c268-82d3-4308-8e1f-225ec72e7eca",
+      "lastModified": "2019-07-31T00:42:52.785-03:00",
+      "name": "actualizar profesor",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {}
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.4",
+        "name": "PUT"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n\"id\": 5,\n\"tipodni\": \"DNI\",\n\"dni\": 4444444,\n\"nombre\": \"Peter\",\n\"apellido\": \"Perez\",\n\"fechanac\": \"1986-06-03\",\n\"sexo\": \"masculino\",\n\"telefono\": \"1234567\",\n\"domicilio\": \"Maestro Gonzalez 820\"\n},"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8090",
+        "path": "/instituto/alumno"
+      },
+      "id": "0be58bc7-c135-4d59-8cae-3a27651a4db2",
+      "lastModified": "2019-07-31T00:43:37.029-03:00",
+      "name": "actualizar un alumno",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {}
+    },
+    {
+      "uriEditor": true,
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.5",
+        "name": "DELETE"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": [
+            {
+              "enabled": true,
+              "name": "id",
+              "value": "1"
+            }
+          ]
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8090",
+        "path": "/instituto/alumno"
+      },
+      "id": "afbd8f60-1fc2-4971-a054-b4028a15363e",
+      "lastModified": "2019-07-31T03:21:21.823-03:00",
+      "name": "borrar alumno",
+      "headers": [],
+      "metaInfo": {}
+    },
+    {
+      "uriEditor": true,
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.5",
+        "name": "DELETE"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": [
+            {
+              "enabled": true,
+              "name": "curso_id",
+              "value": "4"
+            }
+          ]
+        },
+        "scheme": {
+          "secure": true,
+          "name": "https",
+          "version": "V11"
+        },
+        "host": "localhost:8090",
+        "path": "/instituto/cursada/alumno/4/curso"
+      },
+      "id": "a2aea03b-9d27-4a49-91d8-7373451a1f93",
+      "lastModified": "2019-07-31T03:25:16.640-03:00",
+      "name": "borrar cursada",
+      "headers": [],
+      "metaInfo": {}
+    },
+    {
+      "uriEditor": true,
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.5",
+        "name": "DELETE"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": [
+            {
+              "enabled": true,
+              "name": "id",
+              "value": "2"
+            }
+          ]
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8090",
+        "path": "/instituto/curso"
+      },
+      "id": "731e52fc-b645-4529-8348-9a41cb4b20d0",
+      "lastModified": "2019-07-31T03:24:12.293-03:00",
+      "name": "borrar curso",
+      "headers": [],
+      "metaInfo": {}
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.5",
+        "name": "DELETE"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8090",
+        "path": "/instituto/profesor/1"
+      },
+      "id": "dbff0226-7211-4a3c-96c0-606a79a4a9f8",
+      "lastModified": "2019-07-31T03:18:03.173-03:00",
+      "name": "borrar profesor",
+      "headers": [],
+      "metaInfo": {}
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n\"tipodni\": \"DNI\",\n\"dni\": 32173506,\n\"nombre\": \"Jhon\",\n\"apellido\": \"Perez\",\n\"fechanac\": \"1986-06-04\",\n\"sexo\": \"masculino\",\n\"telefono\": \"1234567\",\n\"domicilio\": \"Maestro Gonzalez 820\"\n}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8090",
+        "path": "/instituto/alumno"
+      },
+      "id": "59de5aee-fd16-4d05-a8e3-748ca409717b",
+      "lastModified": "2019-07-30T14:07:11.373-03:00",
+      "name": "cargar un alumno",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": null
+      }
+    },
+    {
+      "uriEditor": true,
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "\n{\n\"nombreCurso\": \"Matematica\",\n\"descripcion\": \"Numeros\",\n\"notaXAprobar\": 6\n  \n\n}\n"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": [
+            {
+              "enabled": true,
+              "name": "id_profesor",
+              "value": "5"
+            }
+          ]
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8090",
+        "path": "/instituto/curso/profesor"
+      },
+      "id": "f2a10250-3ba5-4474-873f-f6387f413ac0",
+      "lastModified": "2019-07-30T14:42:06.686-03:00",
+      "name": "cargar un curso",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {}
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n\n\"tipodni\": \"DNI\",\n\"dni\": 1111111,\n\"nombre\": \"Andres\",\n\"apellido\": \"Chiurazzi2\",\n\"fechanac\": \"2018-06-03\",\n\"sexo\": \"masculino\",\n\"telefono\": \"1234567\",\n\"domicilio\": \"Maestro Gonzalez 820\"\n},"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8090",
+        "path": "/instituto/profesor"
+      },
+      "id": "7793beb8-636d-48ca-a925-1933daaf762d",
+      "lastModified": "2019-07-30T14:40:50.849-03:00",
+      "name": "cargar un profesor",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {}
+    },
+    {
+      "uriEditor": true,
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  \"fechaCursada\":\"2018-03-01\",\n  \"nota\": null,\n  \"alumno\":{\n\"id\": 5,\n\"tipodni\": \"DNI\",\n\"dni\": 32173506,\n\"nombre\": \"Lu\",\n\"apellido\": \"Chiurazzi2\",\n\"fechanac\": \"2018-06-03\",\n\"sexo\": \"masculino\",\n\"telefono\": \"1234567\",\n\"domicilio\": \"Maestro Gonzalez 820\"\n},\n  \"curso\":{\n\"id\": 3,\n\"nombreCurso\": \"Ingles 1\",\n\"descripcion\": \"Idioma ingles\",\n\"notaXAprobar\": 7,\n\"profesor\":{\n\"id\": 4,\n\"tipodni\": \"DNI\",\n\"dni\": 5555555,\n\"nombre\": \"Pepe Profesor\",\n\"apellido\": \"Chiurazzi2\",\n\"fechanac\": \"2018-06-01\",\n\"sexo\": \"masculino\",\n\"telefono\": \"1234567\",\n\"domicilio\": \"Maestro Gonzalez 820\"\n}\n}\n}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": [
+            {
+              "enabled": true,
+              "name": "alumno_id",
+              "value": "5"
+            }
+          ]
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8090",
+        "path": "/instituto/cursada/curso/3/alumno"
+      },
+      "id": "841f510c-14d4-4670-9a05-1a88bb7e27d0",
+      "lastModified": "2019-07-31T02:32:17.329-03:00",
+      "name": "inscribir alumno en curso(crear cursada)",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {}
+    },
+    {
+      "uriEditor": true,
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": [
+            {
+              "enabled": true,
+              "name": "id",
+              "value": "4"
+            }
+          ]
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8090",
+        "path": "/instituto/cursada/alumno"
+      },
+      "id": "98203556-89d7-45a1-9da6-9608fb24029e",
+      "lastModified": "2019-07-31T01:32:13.344-03:00",
+      "name": "obtener cursadas por alumno",
+      "headers": [],
+      "metaInfo": {}
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8090",
+        "path": "/instituto/alumno/1/cursos"
+      },
+      "id": "d7b14b11-0deb-4b38-b519-60534cd0a070",
+      "lastModified": "2019-07-30T23:47:10.238-03:00",
+      "name": "obtener cursos por alumno",
+      "headers": [],
+      "metaInfo": {}
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8090",
+        "path": "/instituto/profesor/4/cursos"
+      },
+      "id": "868811dc-a3e9-43b1-a7b2-9f270138c03e",
+      "lastModified": "2019-07-31T03:28:26.582-03:00",
+      "name": "obtener cursos por profesor",
+      "headers": [],
+      "metaInfo": {}
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": [
+            {
+              "name": "id",
+              "value": ""
+            }
+          ]
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8090",
+        "path": "/instituto/alumno/4/cursos/aprobados"
+      },
+      "id": "d868225a-93ec-47f1-beaa-c4e7cf289450",
+      "lastModified": "2019-07-31T03:47:15.705-03:00",
+      "name": "obtener la lista de cursos aprobados de un alumno",
+      "headers": [],
+      "metaInfo": {}
+    },
+    {
+      "uriEditor": true,
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8090",
+        "path": "/instituto/alumnos"
+      },
+      "id": "a4dad40f-d353-4027-8d0a-08bf9f23a993",
+      "lastModified": "2019-07-30T14:19:20.095-03:00",
+      "name": "obtener todos los alumnos",
+      "headers": [],
+      "metaInfo": {}
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8090",
+        "path": "/instituto/curso/3/alumnos"
+      },
+      "id": "12e6cfc7-208c-4ba3-92e0-d98c53f1e0a7",
+      "lastModified": "2019-07-31T03:29:26.053-03:00",
+      "name": "obtener todos los alumnos de un curso",
+      "headers": [],
+      "metaInfo": {}
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8090",
+        "path": "/instituto/cursos"
+      },
+      "id": "f3f9ade4-b19d-46b1-965d-fe86cefa19e0",
+      "lastModified": "2019-07-30T14:29:23.053-03:00",
+      "name": "obtener todos los cursos",
+      "headers": [],
+      "metaInfo": {}
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8090",
+        "path": "/instituto/profesores"
+      },
+      "id": "94625a7d-9a62-4c88-a15b-4b63852045aa",
+      "lastModified": "2019-07-30T14:29:57.247-03:00",
+      "name": "obtener todos los profesores",
+      "headers": [],
+      "metaInfo": {}
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8090",
+        "path": "/instituto/curso/4/alumnos/aprobados"
+      },
+      "id": "8f10d605-946e-425d-9c97-207b22a8e55a",
+      "lastModified": "2019-07-31T04:02:52.363-03:00",
+      "name": "obtner los alumnos aprobados de un curso",
+      "headers": [],
+      "metaInfo": {}
+    }
+  ]
+}
