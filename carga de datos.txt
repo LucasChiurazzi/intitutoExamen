@@ -1,0 +1,27 @@
+En caso de que se ejecute la aplicacion antes de cargar el script de sql.
+
+INSERT INTO `alumno` (`id`, `apellido`, `dni`, `domicilio`, `fechanac`, `nombre`, `sexo`, `telefono`, `tipodni`) VALUES
+(3, 'Perez', 32173506, 'Maestro Gonzalez 820', '1986-06-04', 'Jhon', 'masculino', '1234567', 'DNI'),
+(4, 'Perez', 32173506, 'Maestro Gonzalez 820', '1986-06-04', 'Juan', 'masculino', '1234567', 'DNI'),
+(5, 'Perez', 4444444, 'Maestro Gonzalez 820', '1986-06-03', 'Peter', 'masculino', '1234567', 'DNI'),
+(6, 'Perez', 32173506, 'Maestro Gonzalez 820', '1986-06-04', 'Pedro', 'masculino', '1234567', 'DNI');
+
+
+
+INSERT INTO `cursada` (`id`, `fecha_cursada`, `nota`, `alumno_id`, `curso_id`) VALUES
+(2, '2015-03-02 00:00:00', 10, 4, 4),
+(3, '2018-03-01 00:00:00', 9, 5, 3),
+(4, '2019-08-05 00:00:00', 5, 6, 3);
+
+
+INSERT INTO `curso` (`id`, `descripcion`, `nombre_curso`, `notaxaprobar`, `profesor_id`) VALUES
+(2, 'Introduccion', 'Programacion', 7, 2),
+(3, 'Idioma ingles', 'Ingles 1', 7, 4),
+(4, 'Numeros', 'Matematica', 6, 5);
+
+
+INSERT INTO `profesor` (`id`, `apellido`, `dni`, `domicilio`, `fechanac`, `nombre`, `sexo`, `telefono`, `tipodni`) VALUES
+(2, 'Chiurazzi2', 32173506, 'Maestro Gonzalez 820', '2018-06-03', 'Lu', 'masculino', '1234567', 'DNI'),
+(3, 'Chiurazzi2', 32173506, 'Maestro Gonzalez 820', '2018-06-03', 'Profesor', 'masculino', '1234567', 'DNI'),
+(4, 'Chiurazzi2', 5555555, 'Maestro Gonzalez 820', '2018-06-02', 'Pepe Profesor', 'masculino', '1234567', 'DNI'),
+(5, 'Chiurazzi2', 1111111, 'Maestro Gonzalez 820', '2018-06-03', 'Andres', 'masculino', '1234567', 'DNI');
